@@ -3,7 +3,7 @@ kind: SpinApp
 metadata:
   name: runtime-config
 spec:
-  image: "ghcr.io/spinkube/containerd-shim-spin/examples/spin-rust-hello:v0.13.0"
+  image: "ghcr.io/spinkube/hello:v0.13.0"
   replicas: 1
   executor: containerd-shim-spin
   runtimeConfig:
@@ -12,7 +12,7 @@ spec:
         type: "libsql"
         options:
           - name: "url"
-            value: "https://sensational-penguin-ahacker.libsql.example.com"
+            value: "https://mydb.libsql.example.com"
           - name: "token"
             valueFrom:
               secretKeyRef:

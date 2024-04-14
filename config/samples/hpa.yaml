@@ -3,7 +3,7 @@ kind: SpinApp
 metadata:
   name: hpa-spinapp
 spec:
-  image: ghcr.io/spinkube/spin-operator/cpu-load-gen:20240311-163328-g1121986
+  image: ghcr.io/spinkube/cpu-load-gen:v1
   executor: containerd-shim-spin
   enableAutoscaling: true
   resources:
@@ -32,3 +32,5 @@ spec:
       target:
         type: Utilization
         averageUtilization: 50
+
+
